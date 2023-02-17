@@ -10,8 +10,16 @@ use Illuminate\Support\Str;
 class PlaceController extends Controller
 {
 
+    private $validation_rules = [
+        'name' => 'required|max:255',
+        'lat' => 'required|numeric|between:-90,90',
+        'lng' => 'required|numeric|between:-180,180',
+    ];
+
     public function create(Request $request, $id)
     {
+
+
 
         $place = new Place();
         $place->name = $request->name;
