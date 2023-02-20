@@ -11,6 +11,6 @@ class PlaceSeeder extends Seeder
 
     public function run()
     {
-        Place::factory()->count(5)->create();
+        Place::factory()->count(3)->create();
     }
 }

@@ -19,7 +19,7 @@ class PlaceFactory extends Factory
             'name' => $this->faker->address,
             'lat' => $this->faker->latitude,
             'lng' => $this->faker->longitude,
-            'location_id' => 368,
+            'location_id' => 352,
             'visited' => 0
         ];
     }

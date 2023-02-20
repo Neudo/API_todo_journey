@@ -35,9 +35,11 @@ class PlaceController extends Controller
 
     }
 
-    public function show($id)
+    public function show(Request $request, $id)
     {
+        $postedId = $request->id;
         $place= Place::find($id);
+        $place = Place::where('location_id', $postedId)->get();
         return response()->json($place);
     }
 
